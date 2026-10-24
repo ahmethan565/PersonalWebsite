@@ -28,7 +28,7 @@
   "about": {
     "bio1": "I am a game developer pursuing a Bachelor's degree in Digital Game Design at Bahcesehir University (Expected Graduation: July 2026), with hands-on experience in multiplayer game development using Photon PUN.",
     "bio2": "Proficient in C#, C++, and algorithm design, specialized in developing engaging combat and puzzle mechanics using scalable and maintainable Object-Oriented Programming (OOP) architectures. My experience at BAU Code Nexus also includes leadership in technical community building and hackathon organization.",
-    "aboutImg": "images/about-custom.jpg",
+    "aboutImg": null,
     "education": [
       {
         "id": "e1",
@@ -41,29 +41,24 @@
     ],
     "experience": [
       {
+        "id": "_r2mxd1r",
+        "role": "QA Tester",
+        "company": "Motion Blur",
+        "dateFrom": "Jul 2026",
+        "dateTo": "Present",
+        "bullets": []
+      },
+      {
         "id": "x1",
         "role": "Unity Developer",
         "company": "Ranke Studios",
         "dateFrom": "Apr 2025",
-        "dateTo": "Present",
+        "dateTo": "Jul 2026",
         "bullets": [
           "Developing a multiplayer Co-Op puzzle adventure game \"Lost In Your Eyes\" (Release: Jun 2026)",
           "Building Photon PUN-based multiplayer mechanics, combat and puzzle systems",
           "GitHub repository management and technical oversight",
           "İTÜ Seed Startup"
-        ]
-      },
-      {
-        "id": "x2",
-        "role": "Unreal Engine Developer Intern",
-        "company": "Motion Blur",
-        "dateFrom": "Nov 2025",
-        "dateTo": "Jan 2026",
-        "bullets": [
-          "Contributed to \"Black State\" using Unreal Engine 5.4 and Perforce",
-          "Level design with Nanite performance optimisation",
-          "Gameplay mechanics, interaction systems and AI behaviours via Blueprints",
-          "HUD elements with UMG; particle effects with Niagara"
         ]
       },
       {
@@ -133,42 +128,42 @@
     ],
     "autoGames": [
       {
-        "id": "itch_9uy99ms",
+        "id": "itch_meerm1f",
         "title": "Unlock The Past",
         "thumb": "https://img.itch.zone/aW1nLzIwMjUwMTEzLmpwZw==/315x250%23c/XSxARs.jpg",
         "link": "https://4hmethan.itch.io/unlock-the-past",
         "genre": "Puzzle"
       },
       {
-        "id": "itch_jetczoe",
+        "id": "itch_ivso9z5",
         "title": "JOURNAL OF THE SCIENTIST",
         "thumb": "https://img.itch.zone/aW1nLzE1ODUyMzY2LnBuZw==/315x250%23c/5k2KFR.png",
         "link": "https://4hmethan.itch.io/journey-of-the-scientist",
         "genre": "Action"
       },
       {
-        "id": "itch_9kzozne",
+        "id": "itch_ep1xf61",
         "title": "MindQuake",
         "thumb": "https://img.itch.zone/aW1nLzE1MDA1OTk5LnBuZw==/315x250%23c/jP9q2E.png",
         "link": "https://onurtercan.itch.io/mindquake",
         "genre": ""
       },
       {
-        "id": "itch_3lnxwj1",
+        "id": "itch_7okh8jy",
         "title": "Karıncayiyen - Cave Mash",
         "thumb": "",
         "link": "https://4hmethan.itch.io/cave-mash",
         "genre": "Action"
       },
       {
-        "id": "itch_qpm26ws",
+        "id": "itch_vad5jgk",
         "title": "Longing",
         "thumb": "https://img.itch.zone/aW1nLzEyMTAwODgwLmpwZw==/315x250%23c/W5XOro.jpg",
         "link": "https://seymojet.itch.io/longing",
         "genre": "Platformer"
       },
       {
-        "id": "itch_78ckoel",
+        "id": "itch_47foy6v",
         "title": "Voyage",
         "thumb": "https://img.itch.zone/aW1nLzEwNjI1ODg4LnBuZw==/315x250%23cb/nWZlyj.png",
         "link": "https://seymojet.itch.io/voyage",

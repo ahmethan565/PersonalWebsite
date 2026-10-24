@@ -43,6 +43,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);display:
 .btn-add:hover{background:rgba(157,78,221,.15);border-color:var(--neon)}
 .ic-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.85rem;padding:.2rem .35rem;border-radius:4px;transition:color var(--tr)}
 .ic-del:hover{color:var(--red)}
+.ic-move{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;padding:.2rem .3rem;border-radius:4px;transition:color var(--tr)}
+.ic-move:hover{color:var(--t)}
+.ic-move:disabled{opacity:.25;cursor:default}
 
 /* LAYOUT */
 .editor-body{display:flex;flex:1;overflow:hidden}
@@ -380,6 +383,8 @@ function timelineCard(item,coll,idx,showBullets){
       <div class="entry-head" onclick="toggleCard('${item.id}')">
         <i class="fa-solid fa-chevron-right entry-chevron" id="chev-${item.id}"></i>
         <span class="entry-summary" id="sum-${item.id}">${esc(item.role||'New Entry')} @ ${esc(item.company||'—')}</span>
+        <button class="ic-move" title="Move up" ${idx===0?'disabled':''} onclick="moveEntry('${coll}',${idx},-1,event)"><i class="fa-solid fa-chevron-up"></i></button>
+        <button class="ic-move" title="Move down" ${idx===S.about[coll].length-1?'disabled':''} onclick="moveEntry('${coll}',${idx},1,event)"><i class="fa-solid fa-chevron-down"></i></button>
         <button class="ic-del" onclick="removeEntry('${coll}',${idx},event)"><i class="fa-solid fa-trash"></i></button>
       </div>
       <div class="entry-body">
@@ -404,6 +409,15 @@ function refreshSum(coll,idx){
 function updateEntry(coll,idx,field,val){S.about[coll][idx][field]=val;refreshSum(coll,idx);}
 function toggleCard(id){const c=g('card-'+id);c.classList.toggle('open');}
 function removeEntry(coll,idx,e){e.stopPropagation();S.about[coll].splice(idx,1);coll==='education'?renderEdu():renderExp();}
+function moveEntry(coll,idx,dir,e){
+  e.stopPropagation();
+  const arr=S.about[coll],j=idx+dir;
+  if(j<0||j>=arr.length)return;
+  const openIds=[...document.querySelectorAll('.entry-card.open')].map(c=>c.id);
+  [arr[idx],arr[j]]=[arr[j],arr[idx]];
+  coll==='education'?renderEdu():renderExp();
+  openIds.forEach(id=>{const c=g(id);if(c)c.classList.add('open');});
+}
 
 function renderEdu(){
   g('edu-list').innerHTML=S.about.education.map((it,i)=>timelineCard(it,'education',i,false)).join('');
